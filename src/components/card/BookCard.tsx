@@ -7,7 +7,7 @@ interface BookProps {
 		title: string;
 		author: string;
 		price: number;
-		image: string;
+		image_url: string;
 	};
 }
 
