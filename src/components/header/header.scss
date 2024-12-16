@@ -1,0 +1,37 @@
+.header {
+	background-color: var(--color-grey-50);
+	color: var(--color-grey-800);
+
+	padding: 1rem 2rem 1rem 2rem;
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: var(--color-blue-700);
+		font-size: 2.1rem;
+
+		&:hover {
+			color: var(--color-blue-100);
+		}
+
+		&--active {
+			color: #007bff;
+			text-decoration: none;
+		}
+	}
+	&__logo {
+		width: 70px;
+	}
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+	}
+}

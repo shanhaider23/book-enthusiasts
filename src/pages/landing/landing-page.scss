@@ -1,0 +1,44 @@
+.landing-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__search {
+		margin: 2rem 0;
+
+		&-form {
+			display: flex;
+			gap: 1rem;
+
+			input {
+				padding: 0.5rem;
+				border: 1px solid #ccc;
+				background-color: var(--color-grey-50);
+				color: var(--color-grey-800);
+				border-radius: 20px;
+				font-size: 14px;
+			}
+
+			button {
+				background-color: transparent;
+				border: none;
+				margin-top: 6px;
+			}
+		}
+		&-image {
+			height: 20px;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+			@media (max-width: 768px) {
+				height: 30px;
+			}
+		}
+	}
+
+	&__latest-books {
+		display: flex;
+		gap: 1rem;
+	}
+}
