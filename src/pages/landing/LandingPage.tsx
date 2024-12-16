@@ -4,9 +4,10 @@ import { books } from '../../data/books';
 import SearchBar from '../../components/search/SearchBar';
 import './landing-page.scss';
 import BookCard from '../../components/card/BookCard';
+import { Book } from '../../types/bookTypes';
 
 const LandingPage: React.FC = () => {
-	const [latestBooks, setLatestBooks] = useState<any[]>([]);
+	const [latestBooks, setLatestBooks] = useState<Book[]>([]);
 
 	useEffect(() => {
 		const sortedBooks = [...books].sort(

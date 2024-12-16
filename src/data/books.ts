@@ -181,7 +181,7 @@ export const books: Book[] = [
 		publisher: 'George Allen & Unwin',
 		page_count: 423,
 		language: 'English',
-		image_url: 'https://example.com/images/lotr_fellowship.jpg',
+		image_url: 'https://m.media-amazon.com/images/I/81ewpuVnBKL.jpg',
 		rating: 4.8,
 		price: 18.0,
 	},
@@ -197,7 +197,8 @@ export const books: Book[] = [
 		publisher: 'HarperOne',
 		page_count: 208,
 		language: 'English',
-		image_url: 'https://example.com/images/the_alchemist.jpg',
+		image_url:
+			'https://images-na.ssl-images-amazon.com/images/I/71zHDXu1TaL._AC_UL210_SR210,210_.jpg',
 		rating: 4.6,
 		price: 10.5,
 	},
@@ -213,7 +214,8 @@ export const books: Book[] = [
 		publisher: 'Alfred A. Knopf',
 		page_count: 287,
 		language: 'English',
-		image_url: 'https://example.com/images/the_road.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/61kKUlUoQHL._AC_UF1000,1000_QL80_.jpg',
 		rating: 4.5,
 		price: 12.0,
 	},
@@ -229,7 +231,8 @@ export const books: Book[] = [
 		publisher: 'Chatto & Windus',
 		page_count: 268,
 		language: 'English',
-		image_url: 'https://example.com/images/brave_new_world.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/81O72cxtofL._UF1000,1000_QL80_.jpg',
 		rating: 4.6,
 		price: 11.99,
 	},
@@ -245,7 +248,8 @@ export const books: Book[] = [
 		publisher: 'Riverhead Books',
 		page_count: 372,
 		language: 'English',
-		image_url: 'https://example.com/images/the_kite_runner.jpg',
+		image_url:
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7pgHjJoblxW7DYBPZ3kW5qmLqdP_AMrNYg&s',
 		rating: 4.8,
 		price: 13.99,
 	},
@@ -261,7 +265,8 @@ export const books: Book[] = [
 		publisher: 'Secker & Warburg',
 		page_count: 112,
 		language: 'English',
-		image_url: 'https://example.com/images/animal_farm.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/71JUJ6pGoIL._AC_UF1000,1000_QL80_.jpg',
 		rating: 4.7,
 		price: 8.5,
 	},
@@ -277,7 +282,8 @@ export const books: Book[] = [
 		publisher: 'Riverhead Books',
 		page_count: 384,
 		language: 'English',
-		image_url: 'https://example.com/images/a_thousand_splendid_suns.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/81xIPfJ6iUL._AC_UF1000,1000_QL80_.jpg',
 		rating: 4.9,
 		price: 14.99,
 	},
@@ -293,7 +299,8 @@ export const books: Book[] = [
 		publisher: 'Picador',
 		page_count: 584,
 		language: 'English',
-		image_url: 'https://example.com/images/the_book_thief.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/81aPTnTmPdL._UF1000,1000_QL80_.jpg',
 		rating: 4.8,
 		price: 12.5,
 	},
@@ -309,7 +316,8 @@ export const books: Book[] = [
 		publisher: 'Dutton Books',
 		page_count: 313,
 		language: 'English',
-		image_url: 'https://example.com/images/the_fault_in_our_stars.jpg',
+		image_url:
+			'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660273739i/11870085.jpg',
 		rating: 4.6,
 		price: 10.99,
 	},
@@ -325,7 +333,8 @@ export const books: Book[] = [
 		publisher: 'McClelland & Stewart',
 		page_count: 311,
 		language: 'English',
-		image_url: 'https://example.com/images/the_handmaids_tale.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/91XT4tkFFeL._UF1000,1000_QL80_.jpg',
 		rating: 4.7,
 		price: 13.99,
 	},
@@ -358,7 +367,8 @@ export const books: Book[] = [
 		publisher: 'Knopf Canada',
 		page_count: 319,
 		language: 'English',
-		image_url: 'https://example.com/images/life_of_pi.jpg',
+		image_url:
+			'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631251689i/4214.jpg',
 		rating: 4.6,
 		price: 12.99,
 	},
@@ -374,7 +384,8 @@ export const books: Book[] = [
 		publisher: 'Doubleday',
 		page_count: 489,
 		language: 'English',
-		image_url: 'https://example.com/images/the_da_vinci_code.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/91FWKxNXR9L._AC_UF894,1000_QL80_.jpg',
 		rating: 4.4,
 		price: 14.5,
 	},
@@ -390,7 +401,8 @@ export const books: Book[] = [
 		publisher: 'Alfred A. Knopf',
 		page_count: 448,
 		language: 'English',
-		image_url: 'https://example.com/images/memoirs_of_a_geisha.jpg',
+		image_url:
+			'https://m.media-amazon.com/images/I/61VT9Y3jKIL._AC_UF894,1000_QL80_.jpg',
 		rating: 4.7,
 		price: 13.5,
 	},
@@ -406,7 +418,8 @@ export const books: Book[] = [
 		publisher: 'Crown Publishing Group',
 		page_count: 432,
 		language: 'English',
-		image_url: 'https://example.com/images/gone_girl.jpg',
+		image_url:
+			'https://www.weidenfeldandnicolson.co.uk/wp-content/uploads/2018/07/hbg-title-9780297859406-141.jpg?w=640',
 		rating: 4.5,
 		price: 12.5,
 	},

@@ -3,6 +3,7 @@ import AppLayout from './ui/AppLayout';
 import LandingPage from './pages/landing/LandingPage';
 import Books from './pages/books/Books';
 import { DarkModeProvider } from './context/DarkModeContext';
+import BookDetails from './pages/details/BookDetails';
 
 function App() {
 	return (
@@ -12,7 +13,8 @@ function App() {
 					<Route element={<AppLayout />}>
 						<Route index element={<Navigate replace to="home" />} />
 						<Route path="home" element={<LandingPage />} />
-						<Route path="/books" element={<Books />} />
+						<Route path="/book" element={<Books />} />
+						<Route path="/book/:id" element={<BookDetails />} />
 					</Route>
 
 					{/* <Route path="*" element={<PageNotFound />} /> */}

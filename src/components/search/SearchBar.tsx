@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Import hooks from react-router-dom
+import { useNavigate, useLocation } from 'react-router-dom';
 import { books } from '../../data/books';
 import BookCard from '../card/BookCard';
 import Search from '../../assets/loupe.png';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import toastify styles
+import 'react-toastify/dist/ReactToastify.css';
+import { Book } from '../../types/bookTypes';
+import './search-bar.scss';
 
 const SearchBar: React.FC = () => {
 	const [searchTerm, setSearchTerm] = useState('');
-	const [filteredBooks, setFilteredBooks] = useState<any[]>([]);
+	const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
 	const [error, setError] = useState('');
 
 	const navigate = useNavigate();
 	const location = useLocation();
 
-	// Extract the search term from the URL on component mount
 	useEffect(() => {
 		const params = new URLSearchParams(location.search);
 		const query = params.get('search');
@@ -27,7 +28,7 @@ const SearchBar: React.FC = () => {
 	// Handle search input change
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchTerm(e.target.value);
-		setError(''); // Clear error message when user starts typing
+		setError('');
 	};
 
 	// Display a toast notification
@@ -43,7 +44,6 @@ const SearchBar: React.FC = () => {
 		});
 	};
 
-	// Filter books by title or author
 	const searchBooks = (query: string) => {
 		const results = books.filter(
 			(book) =>
@@ -56,26 +56,23 @@ const SearchBar: React.FC = () => {
 		if (results.length === 0) {
 			const noBooksMessage = 'No books found matching your search.';
 			setError(noBooksMessage);
-			showToast(noBooksMessage); // Display the toast notification
+			showToast(noBooksMessage);
 		} else {
 			setError('');
 		}
 	};
 
-	// Handle book search
 	const handleSearch = (e: React.FormEvent) => {
 		e.preventDefault();
 
-		// Validate that the search term is not empty
 		if (!searchTerm.trim()) {
 			const errorMessage = 'Please type something to search.';
 			setError(errorMessage);
-			setFilteredBooks([]); // Clear the results if input is empty
-			showToast(errorMessage); // Display the toast notification
+			setFilteredBooks([]);
+			showToast(errorMessage);
 			return;
 		}
 
-		// Update the URL with the search term
 		navigate(`?search=${encodeURIComponent(searchTerm)}`);
 	};
 
