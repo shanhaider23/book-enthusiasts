@@ -6,12 +6,12 @@ import Search from '../../assets/loupe.png';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Book } from '../../types/bookTypes';
-import './search-bar.scss';
 
 const SearchBar: React.FC = () => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
 	const [error, setError] = useState('');
+	const [searchTriggered, setSearchTriggered] = useState(false);
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -25,13 +25,11 @@ const SearchBar: React.FC = () => {
 		}
 	}, [location.search]);
 
-	// Handle search input change
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchTerm(e.target.value);
 		setError('');
 	};
 
-	// Display a toast notification
 	const showToast = (message: string) => {
 		toast.error(message, {
 			position: 'top-right',
@@ -69,10 +67,13 @@ const SearchBar: React.FC = () => {
 			const errorMessage = 'Please type something to search.';
 			setError(errorMessage);
 			setFilteredBooks([]);
+			setSearchTriggered(false);
 			showToast(errorMessage);
 			return;
 		}
 
+		searchBooks(searchTerm);
+		setSearchTriggered(true);
 		navigate(`?search=${encodeURIComponent(searchTerm)}`);
 	};
 
@@ -93,16 +94,20 @@ const SearchBar: React.FC = () => {
 					/>
 				</button>
 			</form>
-
+			{error && <p className="landing-page__error">{error}</p>}
 			<ToastContainer />
 
-			{filteredBooks.length > 0 && (
-				<div className="landing-page__search-results">
-					<h2>Search Results</h2>
-					{filteredBooks.map((book) => (
-						<BookCard key={book.id} book={book} />
-					))}
-				</div>
+			{searchTriggered && (
+				<>
+					<h1>Search Results</h1>
+					{filteredBooks.length > 0 && (
+						<div className="landing-page__search-results">
+							{filteredBooks.map((book) => (
+								<BookCard key={book.id} book={book} />
+							))}
+						</div>
+					)}
+				</>
 			)}
 		</div>
 	);

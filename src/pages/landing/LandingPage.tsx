@@ -20,7 +20,7 @@ const LandingPage: React.FC = () => {
 		<div className="landing-page">
 			<h1>Welcome to Book Enthusiasts</h1>
 			<SearchBar />
-			<h2>Latest Books</h2>
+			<h1>Latest Books</h1>
 			<div className="landing-page__latest-books">
 				{latestBooks.map((book) => (
 					<BookCard key={book.id} book={book} />
