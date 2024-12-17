@@ -4,6 +4,7 @@ import LandingPage from './pages/landing/LandingPage';
 import Books from './pages/books/Books';
 import { DarkModeProvider } from './context/DarkModeContext';
 import BookDetails from './pages/details/BookDetails';
+import PageNotFound from './pages/notFound/PageNotFound';
 
 function App() {
 	return (
@@ -17,7 +18,7 @@ function App() {
 						<Route path="/book/:id" element={<BookDetails />} />
 					</Route>
 
-					{/* <Route path="*" element={<PageNotFound />} /> */}
+					<Route path="*" element={<PageNotFound />} />
 				</Routes>
 			</BrowserRouter>
 		</DarkModeProvider>
