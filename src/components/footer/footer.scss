@@ -1,0 +1,16 @@
+.footer {
+	background-color: var(--color-grey-50);
+	color: var(--color-grey-800);
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	a {
+		text-decoration: underline;
+		color: #007bff;
+		margin-left: 1rem;
+	}
+	&__text {
+		font-style: italic;
+	}
+}
