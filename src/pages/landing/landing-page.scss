@@ -55,10 +55,9 @@
 		}
 	}
 	&__error {
-		position: absolute;
+		// position: absolute;
 		font-size: 1.1rem;
 		color: var(--color-red-700);
-		margin-top: 6rem;
 	}
 	&__latest-books {
 		display: flex;
