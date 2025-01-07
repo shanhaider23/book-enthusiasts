@@ -3,7 +3,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import './scss/app-layout.scss';
 
-function AppLayout() {
+const AppLayout: React.FC = () => {
 	return (
 		<>
 			<Header />
@@ -13,6 +13,6 @@ function AppLayout() {
 			<Footer />
 		</>
 	);
-}
+};
 
 export default AppLayout;

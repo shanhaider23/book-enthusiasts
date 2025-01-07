@@ -6,7 +6,7 @@ import { DarkModeProvider } from './context/DarkModeContext';
 import BookDetails from './pages/details/BookDetails';
 import PageNotFound from './pages/notFound/PageNotFound';
 
-function App() {
+const App: React.FC = () => {
 	return (
 		<DarkModeProvider>
 			<BrowserRouter>
@@ -23,6 +23,6 @@ function App() {
 			</BrowserRouter>
 		</DarkModeProvider>
 	);
-}
+};
 
 export default App;

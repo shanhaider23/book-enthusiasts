@@ -1,11 +1,8 @@
 describe('Book Search Functionality', () => {
 	it('should show search results when searching for a book', () => {
 		cy.visit('/home');
-
 		cy.get('input[placeholder="Search for books..."]').type('Harry Potter');
-
 		cy.get('button[type="submit"]').click();
-
 		cy.contains('Search Results').should('exist');
 		cy.get('.landing-page__search-results .book-card').should(
 			'have.length.at.least',
