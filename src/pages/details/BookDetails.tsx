@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import { books } from '../../data/books';
 import { Book } from '../../types/bookTypes';
+import Back from '../../assets/back.png';
 import './book-details.scss';
 
 const BookDetails: React.FC = () => {
@@ -34,7 +35,17 @@ const BookDetails: React.FC = () => {
 				</p>
 				<p className="book-details__language">Language: {book.language}</p>
 				<p className="book-details__rating">Rating: {book.rating.toFixed(1)}</p>
-				<p className="book-details__price">Price: ${book.price.toFixed(2)}</p>
+				<div className="book-details__price">
+					<p className="book-details__price-text">
+						Price: ${book.price.toFixed(2)}
+					</p>
+					<div className="book-details__back">
+						<NavLink to="/book" className="book-details__back-link">
+							<img src={Back} alt="Back" className="book-details__back-icon" />
+							<span className="book-details__tooltip">Go Back</span>
+						</NavLink>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

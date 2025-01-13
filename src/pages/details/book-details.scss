@@ -37,6 +37,55 @@
 		font-weight: bold;
 	}
 
+	&__price {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__back-icon {
+		height: 50px;
+	}
+	&__back {
+		position: relative;
+		display: inline-block;
+	}
+	&__back-link {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		position: relative;
+
+		&:hover .book-details__tooltip {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__tooltip {
+		position: absolute;
+		top: -35px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #333;
+		color: #fff;
+		padding: 5px 10px;
+		border-radius: 4px;
+		font-size: 12px;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.2s ease, visibility 0.2s ease;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-width: 5px;
+			border-style: solid;
+			border-color: #333 transparent transparent transparent;
+		}
+	}
 	&__author,
 	&__isbn,
 	&__publisher,
@@ -45,13 +94,13 @@
 	&__page-count,
 	&__language,
 	&__rating,
-	&__price,
+	&__price-text,
 	&__description {
 		font-size: 2rem;
 		line-height: 1.5;
 	}
 
-	&__price {
+	&__price-text {
 		font-weight: bold;
 		font-size: 3rem;
 		color: #ff5722;
